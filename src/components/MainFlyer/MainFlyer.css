@@ -1,0 +1,64 @@
+#MainImg {
+    width: 40rem;
+    height: 26.5rem;
+    border-left: solid white 1px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  #MainShoeImg {
+    width: 18rem;
+    margin: 0 3.5rem;
+  }
+  
+  main {
+    width: 65rem;
+    margin: 3rem auto;
+    display: flex;
+    
+  }
+  
+  .containerShoeMain {
+    width: 25rem;
+    height: 26.5rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  #priceMain {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #463320;
+  }
+  
+  .containerButtonPrice {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #buttonPrice {
+    padding: 5px 15px;
+    color: white;
+    max-width: 150px;
+    background-color: #8a6642;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
+  
+  .titleMain {
+    color: #463320;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  #titleFP {
+    text-align: center;
+  
+    font-size: 1.5rem;
+    color: #463320;
+    position: absolute;
+  }
+  

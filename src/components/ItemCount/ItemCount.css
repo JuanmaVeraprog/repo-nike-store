@@ -1,0 +1,38 @@
+.counter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.counter-container > button {
+    margin: 0 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #8a6642;
+    color: white;
+}
+
+#counter {
+    align-self: center;
+    color: #463320;
+}
+
+.addCartBtn {
+    width: 6rem;
+    height: 2rem;
+    font-weight: bolder;
+    margin: 2rem auto;
+    background-color: #8a6642;
+    color: white;
+}
+
+.shop-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    color: #463320;
+}
