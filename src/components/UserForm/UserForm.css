@@ -1,0 +1,27 @@
+.formContainer {
+background-color: #f6f6f6;
+  text-align: center;
+  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.25);
+  width: 30rem;
+  height: 23rem;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    margin: 1rem auto;
+    font-weight: bolder;
+}
+
+.orderBtn {
+    padding: 5px 15px;
+     color: white;
+     max-width: 150px;
+     background-color: #8a6642;
+     border-radius: 5px;
+     font-weight: bolder;
+}

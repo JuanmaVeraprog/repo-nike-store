@@ -1,26 +1,31 @@
 import React, { useState } from "react";
+
 import "./ItemCount.css";
 
-export default function ItemCount({ stock, initial, text }) {
-  const [count, setCount] = useState(initial);
 
-  function handleSubstract() {
-    if (count > 1) setCount(count - 1);
-  }
 
-  function handleAdd() {
-    if (count < stock) setCount(count + 1);
-  }
+const ItemCount = ({onAddToCart }) => {
 
+  const [count, setCount] = useState(1)
+
+  const handleAdd = () => setCount( count + 1 )
+  const handleSubstract = () => count > 0 && setCount( count - 1 ) 
+  const handleCart = () => onAddToCart ( count )
+    
+
+  
   return (
-    <div className="shop-container">
-      <h2>Realiza tu compra</h2>
-      <div className="counter-container">
-        <button onClick={handleSubstract}>-</button>
-        <strong id="counter">{count}</strong>
-        <button onClick={handleAdd}>+</button>
-      </div>
-      <button className="addCartBtn">{text}</button>
-    </div>
-  );
+      <div className="containerItemCount">
+        <div className="containerSymbols">     
+          <button onClick={handleSubstract} className="itemCountBtnS">-</button>
+          <div>{count}</div>
+          <button onClick={handleAdd} className="itemCountBtnS">+</button>
+        </div>   
+        <div>
+          <button onClick={handleCart} className="itemCountBtn">Add to Cart</button>
+        </div>
+      </div>  
+  )
 }
+
+export default ItemCount

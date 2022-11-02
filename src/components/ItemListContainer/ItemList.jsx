@@ -5,18 +5,16 @@ import FlexWrapper from "../FlexWrapper/FlexWrapper";
 function ItemList(props) {
   return (
     <>
-      <FlexWrapper>
-        {props.productsList.map((product) => {
+      <FlexWrapper rows={true}>
+        {props.productsList.map((prod) => {
           return (
             <Card
-              key={product.id}
-              id={product.id}
-              title={product.title}
-              img={product.img}
-              price={product.price}
-              detail={product.detail}
-              stock={product.stock}
-              expired={product.expires}
+              key={prod.id}
+              id={prod.id}
+              title={prod.title}
+              img={prod.img}
+              price={prod.price}
+              detail={prod.detail}
             />
           );
         })}

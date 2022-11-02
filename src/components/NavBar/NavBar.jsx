@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import NikeLogo from "../Img/nike-logo.png"
+import NikeLogo from "../../Img/nike-logo.png"
 
 function NavBar() {
   return (

@@ -20,10 +20,6 @@ export default function Card(props) {
     cursor: "pointer",
   };
 
-  const priceStyle = {
-    color: props.offer === true ? "green" : "black",
-  };
-
   const imgStyle = {
     filter: expired ? "grayscale(100%) blur(1px)" : "none",
   };
@@ -38,14 +34,11 @@ export default function Card(props) {
         <img style={imgStyle} src={props.img} alt={props.title}></img>
       </div>
       <div className="card-detail">
-        <h2 className="card-title">{props.title}</h2>
-        <p className="card-detail-p">{props.detail}</p>
-        <h4 style={priceStyle}>
-          {props.offer ? <p>Offer!</p> : <></>}€ {props.price}
-        </h4>
+        <h2>{props.title}</h2>
+        <p>{props.detail}</p>
       </div>
-      <Link to={`/curso/${props.id}`}>
-        <Button color={props.color}>Add to Cart</Button>
+      <Link to={`/prod/${props.id}`}>
+        <Button>Add to Cart</Button>
       </Link>
     </div>
   );

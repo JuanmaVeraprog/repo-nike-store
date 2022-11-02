@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 
-import { getProducts, getProductsByCategory } from "../../mockApi/mockApi";
+import { getProds, getProdsByCategory } from "../../services/firebase";
+
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function ItemListContainer(props) {
   const [productsList, setProductsList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const params = useParams();
   const categoryID = params.categoryID;
 
   useEffect(() => {
+    setProductsList([]);
     if (categoryID === undefined) {
-      getProducts().then((data) => {
+      getProds().then((data) => {
         setProductsList(data);
+        setIsLoading(false);
       });
     } else {
-      getProductsByCategory(categoryID).then((data) => {
+      getProdsByCategory(categoryID).then((data) => {
         setProductsList(data);
+        setIsLoading(false);
       });
     }
   }, [categoryID]);
@@ -25,8 +32,7 @@ function ItemListContainer(props) {
   return (
     <div className="container">
       <h1>Products</h1>
-      <ItemList productsList={productsList} />
-      <hr />
+      {isLoading ? <Loader /> : <ItemList productsList={productsList} />}
     </div>
   );
 }
